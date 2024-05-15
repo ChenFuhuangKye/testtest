@@ -1,5 +1,8 @@
-FROM ubuntu
+FROM ghcr.io/otischung/pros_ai_image:1.2.1
 
-RUN apt update && apt upgrade -y
-RUN apt autoremove
+RUN rm -rf /workspaces/src/*
+COPY ./src /workspaces/src
 
+WORKDIR /workspaces
+
+CMD ["bash", "-l"]
