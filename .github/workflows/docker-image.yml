@@ -33,5 +33,5 @@ jobs:
           platforms: "linux/amd64,linux/arm64"
           push: true
           tags: |
-            "pros_crane:latest"
-            "pros_crane:0.0.0"
+            "chenfuhunag/pros_crane:latest"
+            "chenfuhunag/pros_crane:0.0.0"
