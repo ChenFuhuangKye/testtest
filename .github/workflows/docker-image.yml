@@ -2,9 +2,8 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    tags:
+      - "*"
 
 jobs:
   build:
@@ -34,4 +33,4 @@ jobs:
           push: true
           tags: |
             "chenfuhunag/pros_crane:latest"
-            "chenfuhunag/pros_crane:0.0.0"
+            "chenfuhunag/pros_crane:${{ github.ref_name }}"
